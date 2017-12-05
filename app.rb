@@ -3,12 +3,15 @@ require 'sinatra'
 
 class Battle < Sinatra::Base
   get '/' do
-    #p app_file
-    'Testing infrastructure working!'
+    erb(:index)
   end
 
+  post '/names' do
+    @player_1 = params[:name_1]
+    @player_2 = params[:name_2]
+    erb(:names)
+  end
   # run! if app_file == $0
-
 end
 
 #app_file is the file being run. In this case app.rb
