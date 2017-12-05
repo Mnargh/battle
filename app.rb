@@ -4,13 +4,11 @@ require 'sinatra'
 class Battle < Sinatra::Base
   get '/' do
     #p app_file
-    'Hello battle!'
+    'Testing infrastructure working!'
   end
-  p $0
-  p app_file
-  p "test"
-  run! if app_file == $0
-  p app_file
+
+  # run! if app_file == $0
+
 end
 
 #app_file is the file being run. In this case app.rb
